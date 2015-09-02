@@ -4,7 +4,7 @@ usage()
 {
     echo "Usage: $0 [BuildArch] [BuildType] [clean] [verbose] [cross] [clangx.y] [skipmscorlib]"
     echo "BuildArch can be: x64, ARM"
-    echo "BuildType can be: Debug, Release"
+    echo "BuildType can be: Debug, Release, Coverage"
     echo "clean - optional argument to force a clean build."
     echo "verbose - optional argument to enable verbose build output."
     echo "clangx.y - optional argument to build using clang version x.y."
@@ -226,6 +226,10 @@ for i in "$@"
         release)
         __BuildType=Release
         __CMakeArgs=RELEASE
+        ;;
+        coverage)
+        __BuildType=Coverage
+        __CMakeArgs=COVERAGE
         ;;
         clean)
         __CleanBuild=1

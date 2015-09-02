@@ -34,7 +34,7 @@ fi
 
 build_arch="$4"
 
-# Possible build types are DEBUG, RELEASE, RELWITHDEBINFO, MINSIZEREL.
+# Possible build types are DEBUG, RELEASE, COVERAGE, RELWITHDEBINFO, MINSIZEREL.
 # Default to DEBUG
 if [ -z "$5" ]
 then
